@@ -38,8 +38,8 @@ for char in command:
 for inst_num, inst in enumerate(program):
     for char in inst:
         ser.write(bytearray([ord(char)]))
-        time.sleep(0.001)
-    time.sleep(0.001)
+        time.sleep(0.003)
+    time.sleep(0.003)
     if (inst_num == len(program)-1):
         print("Sent {:d}/{:d} bytes".format(4+inst_num*4, size), end='\n')
     else:
