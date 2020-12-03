@@ -13,6 +13,20 @@
 #define PWM_REQ (*((volatile uint32_t*)0x80000038))
 #define PWM_ACK (*((volatile uint32_t*)0x80000040))
 
+#define HW_EN (*((volatile uint32_t*)0x80000044))
+#define SINE_SHIFT (*((volatile uint32_t*)0x80000200))
+#define SQUARE_SHIFT (*((volatile uint32_t*)0x80000204))
+#define TRIANGLE_SHIFT (*((volatile uint32_t*)0x80000208))
+#define SAWTOOTH_SHIFT (*((volatile uint32_t*)0x8000020c))
+#define FCW (*((volatile uint32_t*)0x80001000))
+
+#define GLOBAL_GAIN_SHIFT (*((volatile uint32_t*)0x80000104))
+#define GLOBAL_SYNTH_RESET (*((volatile uint32_t*)0x80000100))
+#define NOTE_START (*((volatile uint32_t*)0x80001004))
+#define NOTE_RELEASE (*((volatile uint32_t*)0x80001008))
+#define NOTE_FINISHED (*((volatile uint32_t*)0x8000100c))
+#define RESET (*((volatile uint32_t*)0x80001010))
+
 /*
 #define TONE_GEN_OUTPUT_ENABLE (*((volatile uint32_t*)0x80000034))
 #define TONE_GEN_TONE_INPUT (*((volatile uint32_t*)0x80000038))
