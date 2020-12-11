@@ -29,9 +29,9 @@ int main(void) {
   for (;;) {
     // Read the switches to determine which scale to use.
     SINE_SHIFT = (SWITCHES & 0x1) && (SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
-    SQUARE_SHIFT = (SWITCHES & 0x1) && ~(SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
-    TRIANGLE_SHIFT = ~(SWITCHES & 0x1) && (SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
-    SAWTOOTH_SHIFT = ~(SWITCHES & 0x1) && ~(SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
+    SQUARE_SHIFT = (SWITCHES & 0x1) && !(SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
+    TRIANGLE_SHIFT = !(SWITCHES & 0x1) && (SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
+    SAWTOOTH_SHIFT = !(SWITCHES & 0x1) && !(SWITCHES & 0x2) ? 0 : 0xFFFFFFFF;
 
     /*
     // Uncomment this to enable all scales.
